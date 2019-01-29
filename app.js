@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     var log = `${now}: ${req.method} ${req.url}`
 
     console.log(log)
-    fs.appendFileSync('log.txt', log + '\n')
+    fs.appendFileSync('server.log', log + '\n')
     next()
 })
 
