@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     // res.send('<h1>Hello Express!</h1>')
     res.send({
         name: 'sander',
-        age: 21
+        age: 22
     })
 })
 
