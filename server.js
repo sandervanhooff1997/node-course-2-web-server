@@ -22,15 +22,21 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => {
     // res.send('<h1>Hello Express!</h1>')
-    res.send({
-        name: 'sander',
-        age: 22
-    })
+    // res.send({
+    //     name: 'sander',
+    //     age: 22
+    // })
+
+    res.render('home.hbs')
 })
 
 app.get('/about', (req, res) => {
-    res.render('about.hbs', {
-        yeah: 'FUCKYEAH!'
+    res.render('about.hbs')
+})
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        projects: [{ title: 'title 1', body: 'body 1' }, { title: 'title 2', body: 'body 2' }]
     })
 })
 
